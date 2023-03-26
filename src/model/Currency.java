@@ -24,7 +24,7 @@ public abstract class Currency {
 	    }
 	    
 	    public double convertToReais(double value) {
-	        return value * exchangeRate ;
+	        return value / getExchangeRate() ;
 	    }
 	    
 	    

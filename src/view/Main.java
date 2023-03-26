@@ -29,9 +29,9 @@ public class Main {
 				double value = scanner.nextDouble();
 
 				CurrencyConverter Converter = new CurrencyConverter(toCurrency);
-				double result = Converter.Convert(value);
+				double result = Converter.convert(value);
 
-				System.out.println("R$" + value + " = " + toCurrency.getSymbol() + result);
+				System.out.println("R$" + value + " = " + toCurrency.getSymbol() + String.format("%.2f", result));
 
 				System.out.println("Deseja fazer outra conversão? (s/n)");
 				String resposta = scanner.next();
@@ -41,7 +41,12 @@ public class Main {
 					scanner.nextLine();
 				}
 			}
+		} catch (Exception e) {
+			System.out.println("Ocorreu um erro: " + e.getMessage());
+		} finally {
+			System.out.println("Programa finalizado.");
+
 		}
-		System.out.println("Programa finalizado.");
+
 	}
 }

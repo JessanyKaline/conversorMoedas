@@ -9,7 +9,7 @@ public class CurrencyConverter {
         this.toCurrency = toCurrency;
     }
 
-    public double Convert(double value) {
+    public double convert(double value) {
          return toCurrency.convertToReais(value);
     }
 }
